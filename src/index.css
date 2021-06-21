@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app-base-bg{
+  background-color:#dd2400;
+}
+.app-base-text-color{
+  color:#dd2400;
+}
+.app-bg-blue{
+   background-color:#023f88;
+}
+.app-text-blue{
+  color:#023f88;
+}
