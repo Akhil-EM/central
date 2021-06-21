@@ -16,7 +16,7 @@ export default function CategoryCard(props) {
                    <div className='category-card item'>
                         <img width={150} height={150} src={imageUrlBase+item.imageUrl} alt={item.alt} />
                         <br/>
-                        <a href=''>{item.catName}</a>
+                        <a href='#'>{item.catName}</a>
                    </div>
                   ))
              }
