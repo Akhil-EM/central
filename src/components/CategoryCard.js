@@ -3,7 +3,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 import 'owl.carousel/dist/assets/owl.theme.default.css'; 
 
-import {imageUrlBase} from '../config'
+import {imageUrlBase,appBaseUrl} from '../config'
 export default function CategoryCard(props) {
     console.log(props)
     var itemList=props.list;
@@ -16,7 +16,7 @@ export default function CategoryCard(props) {
                    <div className='category-card item'>
                         <img width={150} height={150} src={imageUrlBase+item.imageUrl} alt={item.alt} />
                         <br/>
-                        <a href='#'>{item.catName}</a>
+                        <a href={appBaseUrl+item.catName}>{item.catName}</a>
                    </div>
                   ))
              }
