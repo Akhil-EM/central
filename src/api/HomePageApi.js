@@ -2,7 +2,7 @@ import http from './@axios';
 
 class HomePageApi{
     
-    constructor(){
+    constructor(lang,vendorurlkey,token){
         this._lang=1;
         this._venderUrlKey='centrealkochi';
         this._token=null;
@@ -48,4 +48,4 @@ class HomePageApi{
 
 
 
-export default new HomePageApi();
+export default new HomePageApi;

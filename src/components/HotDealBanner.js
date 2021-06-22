@@ -13,7 +13,7 @@ export default function HotDealBanner(props) {
         <OwlCarousel  className={`owl-theme `} center={true} loop={false} nav={false} items={5} dots={false}>
              {
                  itemList.map((item,key)=>(
-                    <ProductCard className='item' key={key} price={item.unitPrice} name={item.prName} imgurl={item.imageUrl} alt={item.urlKey}/>
+                    <ProductCard className='item' key={key} price={item.unitPrice} name={item.prName} imgurl={item.imageUrl} alt={item.urlKey} key={key}/>
                   ))
              }
         </OwlCarousel>
