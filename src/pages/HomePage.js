@@ -10,6 +10,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css'; 
 import ProductCard from '../components/ProductCard';
 import BrandCard from './BrandCard';
+
+
 export default class HomePage extends Component {
     constructor(props) {
         super(props)
@@ -54,13 +56,13 @@ export default class HomePage extends Component {
                             PopupBanner:serverData.PopupBanner,
                         })
                     }).catch((err)=>{
-                    console.log(err)
+                     console.log(err)
                     });
 
         
         HomePageApi.topCategoryGET()
                     .then((response)=>{
-                        console.log(response)
+                        // console.log(response)
                        this.setState({TopCategoryList:response.data.Data});
                     }).catch((err)=>{
                        console.log(err)

@@ -5,9 +5,9 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 import ProductCard from './ProductCard';
 export default function HotDealBanner(props) {
-    console.log(props)
+    //console.log(props)
     var itemList=props.list;
-    console.log(itemList)
+    // console.log(itemList)
 
     return (
         <OwlCarousel  className={`owl-theme `} center={true} loop={false} nav={false} items={5} dots={false}>
