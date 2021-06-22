@@ -23,6 +23,22 @@ class HeaderApi{
         })
     }
 
+    loginPOST(_testUserName,_testPassword){
+        
+        return http.post('Account/Login',{
+            headers:{
+                lang:this._lang,
+                vendorurlkey:this._venderUrlKey,
+                token:this._token
+            },
+            data:{
+                userName:_testUserName,
+                password:_testPassword
+            }
+            
+        })
+    }
+
    
 }
 

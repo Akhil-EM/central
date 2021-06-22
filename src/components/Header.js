@@ -9,9 +9,15 @@ import SearchItemLoader from './SearchItemLoader'
 import { AiOutlineHeart,AiOutlineClose } from 'react-icons/ai';
 import {FiShoppingBag} from 'react-icons/fi'
 import {FaRegUser} from 'react-icons/fa';
+import Login from './Login';
+import ForgotPassword from './ForgotPassword';
+import LoginWithOtp from './LoginWithOtp';
 import HeaderApi from '../api/HeaderApi';
 
 import '../assets/css/header.css';
+
+
+
 
 
 
@@ -26,9 +32,12 @@ class Header extends Component {
              searchLoadDisplay:'none',
              searchTerm:'',
              show:false,
-             setShow:false
+             setShow:false,
+             
         }
+
         this.handleChange = this.handleChange.bind(this);
+        
     }
     
     handleClose = () => this.setState({show:false});
@@ -38,6 +47,9 @@ class Header extends Component {
         console.log(this.state.searchTerm);
         this.searchProduct();
     } 
+    
+   
+
     
     searchProduct=()=>{
     //   console.log('product searched');
@@ -95,29 +107,10 @@ class Header extends Component {
                             <img width={380}  src={process.env.PUBLIC_URL+'/img/sign-up-image.jpg'} />
                         </div>
                         <div className="col-sm">
-                            <h4>Login</h4>
-                            <br/>
-                            <form>
-                                <div className="form-group mb-2">
-                                    <label for="exampleFormControlInput1">Email / Mobile Number</label>
-                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-                                </div>
-                                <div className="form-group">
-                                    <label for="exampleFormControlInput1">Password</label>
-                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-                                </div>
-                                <br/>
-                                <div className='text-center'>
-                                   <button className='login-btn'>SUBMIT</button>
-                                   <br/>
-                                   <br/>
-                                   <a href='#'>Register Forgot Password ?</a>
-                                   <h6>or</h6>
-                                   <a href='#'>Login with OTP</a>
-                                </div>
-                                
-
-                                </form>
+                            <Login />
+                            {/* <ForgotPassword /> */}
+                            {/* <LoginWithOtp /> */}
+                            
                         </div>
                         
                     </div>
