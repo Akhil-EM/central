@@ -23,13 +23,15 @@ export default class Login extends Component {
         }
         var uName=this.state.testEmailOrPhone;
         var password=this.state.testPassword;
-        HeaderApi.loginPOST(uName,password)
-                 .then((response)=>{
-                     console.log(response);
-                 }).catch((err)=>{
-                     console.log(err)
-                     
-                 })
+        HeaderApi.loginPOST({userName:uName,password:password})
+                        .then((response)=>{
+                           
+                            alert(response.data.Message);
+                        }).catch((err)=>{
+                            console.log(2)
+                            console.log(err)
+                            
+                        })
         
     }
     render() {

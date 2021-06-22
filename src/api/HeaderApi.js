@@ -1,5 +1,6 @@
 import http from './@axios';
-
+import axios from "axios";
+import { appBaseUrl,Headers } from '../config';
 class HeaderApi{
     
     constructor(){
@@ -12,31 +13,32 @@ class HeaderApi{
      _token;
     searchAutoCompleteGET(_term){
         return http.get('Product/SearchAutoComplete',{
-            headers:{
-                lang:this._lang,
-                vendorurlkey:this._venderUrlKey,
-                token:this._token
-            },
             params:{
                 term:_term
             }
         })
     }
 
-    loginPOST(_testUserName,_testPassword){
+    loginPOST(_logCred){
         
-        return http.post('Account/Login',{
-            headers:{
-                lang:this._lang,
-                vendorurlkey:this._venderUrlKey,
-                token:this._token
-            },
-            data:{
-                userName:_testUserName,
-                password:_testPassword
-            }
-            
-        })
+        // return http.post('Account/Login',_logCred);
+
+        return new Promise(function(resolve, reject){
+             
+            axios.post(`${appBaseUrl}Account/Login`,_logCred,Headers).then(function(response){
+                if(response.status=='200'){
+                //  commit('setIsCustomerLoggined',true); 
+                //  commit('setCustomerInfo',response.data.Data); 
+                //  localStorage.setItem('custId',response.data.Data.custId);
+                //  localStorage.setItem('customer_token',response.data.Data.token);
+                //  dispatch('mergeCustomerCart');
+                               
+               }
+               resolve(response);
+             }).catch(function(error){
+                 reject(error);
+             });
+        });
     }
 
    

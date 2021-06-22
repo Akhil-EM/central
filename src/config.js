@@ -1,4 +1,9 @@
 module.exports={
     appBaseUrl:'http://wpr.intertoons.net/centrealapi/api/v2/',
-    imageUrlBase:'http://wpr.intertoons.net/centrealadmin/'
+    imageUrlBase:'http://wpr.intertoons.net/centrealadmin/',
+    Headers:{
+        'lang':'1',
+        'vendorurlkey':'centrealkochi',
+        'token':null
+    }
 }

@@ -220,7 +220,31 @@ export default class HomePage extends Component {
                   }
                   <br></br>
                   <br></br>
-            </div>
+                  <div className='d-flex justify-content-between'> 
+                       
+                       <div class="container">
+                        <div class="row">
+                          <div class="col-3">
+                             <h3>Popular Brands</h3>
+                          </div>
+                          <div class="col-9">
+                             {
+                               this.state.BrandList.length < 0?'':
+                               <div className='d-flex'>
+                                   {
+                                     this.state.BrandList.map((item,key)=>(
+                                     
+                                         <a key={key} href={item.attrValue}>{item.attrValue}  ,</a>
+                                         
+                                    ))
+                                   }  
+                               </div>
+                             }
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+             </div>
         )
     }
 }

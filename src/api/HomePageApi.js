@@ -11,32 +11,15 @@ class HomePageApi{
      _venderUrlKey;
      _token;
     homeProductsGET(){
-        return http.get('Products/HomeProducts',{
-            headers:{
-                lang:this._lang,
-                vendorurlkey:this._venderUrlKey,
-                token:this._token
-            }
-        })
+        return http.get('Products/HomeProducts')
     }
 
     topCategoryGET(){
-         return http.get('category/TopCategory',{
-             headers:{
-                lang:this._lang,
-                vendorurlkey:this._venderUrlKey,
-                token:this._token
-             }
-         });
+         return http.get('category/TopCategory');
     }
 
     dealOfTheDayGET(){
         return http.get('DealOfDay',{
-            headers:{
-                lang:this._lang,
-                vendorurlkey:this._venderUrlKey,
-                token:this._token
-            },
             params:{
                 custId:'',
                 guestId:'ai6y3xy'
@@ -46,11 +29,6 @@ class HomePageApi{
     
     popularProductGET(){
         return http.get('PopularProduct',{
-            headers:{
-                lang:this._lang,
-                vendorurlkey:this._venderUrlKey,
-                token:this._token
-            },
             params:{
                 custId:'',
                 guestId:'ai6y3xy'
@@ -60,11 +38,6 @@ class HomePageApi{
     
     BrandListGET(){
         return http.get('BrandList',{
-            headers:{
-                lang:this._lang,
-                vendorurlkey:this._venderUrlKey,
-                token:this._token
-            },
             params:{
                 custId:'',
                 guestId:'ai6y3xy'
